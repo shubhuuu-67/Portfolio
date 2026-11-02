@@ -1,0 +1,255 @@
+/* Color Palette Setup */
+:root {
+  --bg-color: #1E1E2F;          /* Deep Charcoal Blue */
+  --card-bg: #28283E;           /* Slightly lighter surface tone */
+  --text-main: #FFFFFF;         /* Pure White */
+  --accent-lavender: #E6E6FA;   /* Lavender */
+  --accent-thistle: #D8BFD8;    /* Thistle */
+  --accent-violet: #9C27B0;     /* Deep Violet */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background: rgba(30, 30, 47, 0.95);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(230, 230, 250, 0.1);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--accent-lavender);
+}
+
+.logo span {
+  color: var(--accent-violet);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: var(--text-main);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--accent-lavender);
+}
+
+/* Common Section Layout */
+.section {
+  padding: 100px 8% 60px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: var(--accent-lavender);
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 4px;
+  background-color: var(--accent-violet);
+  margin-top: 8px;
+  border-radius: 2px;
+}
+
+/* Hero Section */
+.hero-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 8%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.greeting {
+  color: var(--accent-thistle);
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin: 15px 0 30px;
+  line-height: 1.2;
+}
+
+.highlight {
+  color: var(--accent-lavender);
+  background: linear-gradient(45deg, var(--accent-lavender), var(--accent-violet));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: var(--accent-violet);
+  color: var(--text-main);
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  background-color: #7b1fa2;
+  transform: translateY(-2px);
+}
+
+/* Card Styling */
+.card {
+  background-color: var(--card-bg);
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid rgba(216, 191, 216, 0.15);
+}
+
+.about-card p {
+  margin-bottom: 15px;
+  font-size: 1.05rem;
+}
+
+.about-card p strong {
+  color: var(--accent-lavender);
+}
+
+/* Skills Cards */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.skill-card {
+  background-color: var(--card-bg);
+  padding: 25px;
+  border-radius: 10px;
+  border-left: 4px solid var(--accent-violet);
+  transition: transform 0.3s;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+}
+
+.skill-card h3 {
+  color: var(--accent-lavender);
+  margin-bottom: 8px;
+}
+
+.skill-card p {
+  color: #bbb;
+  font-size: 0.9rem;
+}
+
+/* Timeline / Experience */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.timeline-item {
+  background-color: var(--card-bg);
+  padding: 20px 25px;
+  border-radius: 8px;
+  position: relative;
+  border-left: 3px solid var(--accent-lavender);
+}
+
+.timeline-item .year {
+  display: inline-block;
+  background-color: var(--accent-violet);
+  color: var(--text-main);
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 3px 10px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.timeline-item h3 {
+  color: var(--accent-lavender);
+  font-size: 1.2rem;
+}
+
+.timeline-item p {
+  color: #ccc;
+  font-size: 0.95rem;
+  margin-top: 5px;
+}
+
+/* Contact Details */
+.contact-details {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-item a {
+  color: var(--accent-lavender);
+  text-decoration: none;
+  margin-left: 8px;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.85rem;
+  color: #888;
+  border-top: 1px solid rgba(230, 230, 250, 0.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+  .nav-links {
+    gap: 10px;
+    font-size: 0.9rem;
+  }
+}
